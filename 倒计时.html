@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>到几时</title>
+</head>
+<body>
+	<span id="hour">12</span>:
+	<span id="minute">12</span>:
+	<span id="second">12</span>
+</body>
+<script>
+setInterval(function(){
+	var hour=document.getElementById('hour');
+	var minute=document.getElementById('minute');
+	var second=document.getElementById('second');
+	var tim_now=new Date();
+	var tim_2016_8_9=new Date("2016-10-20:18:00");
+	var tim_diff=tim_2016_8_9-tim_now;
+
+	var hour_diff=Math.floor(tim_diff/(60*1000*60));
+	var minute_diff=Math.floor(tim_diff/60/1000%60);
+	var second_diff=Math.floor(tim_diff/1000%60);
+
+	hour.innerHTML=hour_diff;
+	minute.innerHTML=minute_diff;
+	second.innerHTML=second_diff;
+},1000);
+	
+
+//	var time=new Date();
+//	time.setMonth(8);
+//	time.setDate(0);
+</script>
+</html>
+
+ 

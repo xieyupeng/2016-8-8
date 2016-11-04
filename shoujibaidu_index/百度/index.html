@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>百度</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		
+	</head>
+	<body>
+		<div class="weather">
+			<div class="detail">
+				<div class="del">
+					<div class="bj">
+						<span>
+							<i class="iconfont wz">&#xe693;</i>
+						</span><!-- 
+						<span></span> -->
+						<span>北京</span>
+					</div>
+					<div class="waer">
+						<p>27°</p>
+						<i class="iconfont qte">&#xe629;</i>
+						<span>晴转多云&nbsp;北风3-4级转微风 < 2级</span>
+					</div>
+					<div class="deg">
+						<p>低温:22°</p>
+					</div>
+					<p class="aier">空气质量 : 23</p>
+					<span class="toggle">
+						<i class="iconfont asa">&#xe614;</i>
+					</span>
+					<a href="#" class="more">查看更多</a>
+				</div>
+				<ul class="day">
+					<li>
+						<p>明天</p>
+						<i class="iconfont mt">&#xe629;</i>
+						<p>35°/22°</p>
+					</li>
+					<li>
+						<p>周二</p>
+						<i class="iconfont mt">&#xe607;	</i>
+						<p>34°/24°</p>
+					</li>
+					<li>
+						<p>周三</p>
+						<i class="iconfont mt">&#xe672;</i>
+						<p>31°/20°</p>
+					</li>
+					<li>
+						<p>周四</p>
+						<i class="iconfont mt">&#xe6a3;</i>
+						<p>30°/22°</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header">
+			<div class="head">
+				<div class="air">
+					<i class="iconfont qt">&#xe629;</i>
+					<p>27°</p>
+					<div class="bjair">
+						<p>北京</p>
+						<p class="kq">空气&nbsp;28</p>
+
+					</div>
+					<i class="iconfont xs">&#xe81c;</i>
+				</div>
+				<div class="login">
+				<a href="#" id="gryh">
+					<i class="iconfont yh">&#xe6f4;</i>
+				</a>
+			</div>
+			<div class="skina">
+				<a href="#" id="skin">
+					<i class="iconfont hf">&#xe613;</i>
+				</a>
+			</div>
+			</div>
+			<div class="logo">
+				<img src="images/plus_logo.png">
+			</div>
+			<form class="indexform">
+				<input type="text" class="input" >
+				<div class="inner">
+					<div class="call">
+						<div class="ado">
+							<p class="bef"></p>
+							<i class="ly"></i>
+						</div>
+					</div>
+					<div class="pom">
+						<div class="codes">
+							<i></i>
+						</div>
+						<div class="code">
+							<i></i>
+						</div>
+					</div>
+					<button type="submit" class="btn">百度一下</button>
+				</div>
+			</form>
+			<ul class="nav">
+				<li>
+					<i class="iconfont new">&#xe617;</i>
+					新闻
+				</li>
+				<li>
+					<i class="iconfont new">&#xe6c7;</i>
+					小说
+				</li>
+				<li>
+					<i class="iconfont new">&#xe6ab;</i>
+					视频
+				</li>
+				<li>
+					<i class="iconfont new">&#xe602;</i>
+					糯米
+				</li>
+				<li>
+					<i class="iconfont new">&#xe608;</i>
+					地图
+				</li>
+				<li class="morea">
+					<i class="iconfont ">&#xe65d;</i>
+					更多
+				</li>
+			</ul>
+			<ul class="hide">
+				<li>
+					<i class="iconfont new">&#xe6ab;</i>
+					视频
+				</li>
+				<li>
+					<i class="iconfont new">&#xe602;</i>
+					糯米
+				</li>
+				<li>
+					<i class="iconfont new">&#xe608;</i>
+					地图
+				</li>
+				<li>
+					<i class="iconfont new">&#xe6c7;</i>
+					小说
+				</li>
+			</ul>
+		</div>
+		<div class="plue">
+			<div class="data" id="daf"> 
+				<div class="pltitle awe">
+					<h2>我的导航</h2>
+					<a href="#" class="edit" onclick="daohang()">
+						<i class="iconfont gd">&#xe649;</i>
+					</a>
+					<ul class="tap" id="daohang">
+						<li data-action="edit" class="bja">编辑</li>
+						<li data-action="top" class="zd">置顶</li>
+						<li data-action="close" class="close">关闭</li>
+					</ul>
+				</div>
+				<div class="bjtitle">
+					<h2>导航编辑</h2>
+					<div class="blsac">
+						<img src="images/fanhui.png">
+					</div>
+				</div>
+				<div class="dhcontet">
+					<a href="#" >
+						<span class="remo">资讯
+						</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#">
+						<span class="remo">hao123</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#">
+						<span class="remo">图片</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#" class="remo">
+						<span>爱奇艺</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#">
+						<span class="remo">美女</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#">
+						<span class="remo">音乐</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#">
+						<span class="remo">笑话</span>
+						<div class="clo">
+							<img src="images/cuo.png">
+						</div>
+					</a>
+					<a href="#">
+						<i class="iconfont jia ">&#xe60e;</i>
+					</a>
+				</div>
+			</div>
+			<div class="data">
+				<div class="pltitle">
+					<h2>实时热点</h2>
+					<span class="ref" id="anniu">
+						换一批
+						<i class="iconfont sx">&#xe7e9;</i>
+					</span>
+					<a href="#" class="edit" onclick="redian()">
+						<i class="iconfont gd">&#xe649;</i>
+					</a>
+					<ul class="tap" id="redian">
+						<li data-action="top">置顶</li>
+						<li data-action="close">关闭</li>
+					</ul>
+				</div>
+				<ul class="hot" id="times">
+					<li>
+						<a href="#" class="hots"></a>
+					</li>
+					<li>
+						<a href="#" class="hots"></a>
+					</li>
+					<li>
+						<a href="#" class="hots"></a>
+					</li>
+					<li>
+						<a href="#" class="hots"></a>
+					</li>
+					<li>
+						<a href="#" class="hots"></a>
+					</li>
+					<li>
+						<a href="#" class="hots"></a>
+					</li>
+				</ul>
+				<div class="hoesearch">
+					<a href="#">百度风云榜 ></a>
+				</div>
+			</div> 
+			<div class="data">
+				<div class="pltitle">
+					<h2>百度推荐</h2>
+					<span class="ref">
+						换一批
+						<i class="iconfont sx">&#xe7e9;</i>
+					</span>
+					<a href="#" class="edit" onclick="tuijian()">
+						<i class="iconfont gd">&#xe649;</i>
+					</a>
+					<ul class="tap" id="tujian">
+						<li data-action="top">置顶</li>
+						<li data-action="close">关闭</li>
+					</ul>
+				</div>
+				<div class="pltcon">
+					<ul class="newcon">
+						<li>
+							<a href="#">
+								<img src="images/vfrg.jpg">
+								<span class="outer">
+									<p>英国脱欧! 英镑暴跌10%引美元狂飙 人民币跌破6.6</p>
+								</span>
+								<span class="time">06-24</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="menb">访华不到24小时，普京带来哪些“大单”？</span>
+								<span class="timea">07:15</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="menb">访华不到24小时，普京带来哪些“大单”？</span>
+								<span class="timea">07:15</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="menb">访华不到24小时，普京带来哪些“大单”？</span>
+								<span class="timea">07:15</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="hoesearch">
+					<a href="#">百度风云榜 ></a>
+				</div>
+			</div>
+			<div class="data">
+				<div class="pltitle">
+					<h2>生活服务</h2>
+					<a href="#" class="edit">
+						<i class="iconfont gd">&#xe649;</i>
+					</a>
+					<!-- <ul class="tap">
+						<li data-action="top">置顶</li>
+						<li data-action="close">关闭</li>
+					</ul> -->
+				</div>
+				<div class="pltcon">
+					<div class="gps">
+						<div class="gpas"><p>点击定位，查看附近位置信息</p></div>
+						<button>定位</button>
+						<span>
+							<i class="iconfont wza">&#xe693;</i>
+						</span>
+					</div>
+					<ul class="list">
+						<li>
+							<a href="#">
+								<div class="rude">
+									<img src="images/liam.png">
+								</div>
+								<p>电影</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="pon">
+									<i class="iconfont">&#xe602;</i>
+								</div>
+								<p>团购</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="wm">
+									<i class="iconfont">&#xe653;</i>
+								</div>
+								<p>外卖</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tax">
+									<i class="iconfont">&#xe60a;</i>
+								</div>
+								<p>打车</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="hotel">
+									<i class="iconfont">&#xe67f;</i>
+								</div>
+								<p>酒店</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="cacy">
+									<i class="iconfont">&#xe62d;</i>
+								</div>
+								<p>美食</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="ktv">
+									<i class="iconfont">&#xe609;</i>
+								</div>
+								<p>KTV</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="huafei">
+									<i class="iconfont">&#xe60f;</i>
+								</div>
+								<p>充值</p>
+							</a>
+						</li>
+					</ul>
+					<ul class="lista" id="fuwu">
+						<li>
+							<a href="#">
+								<div class="rude">
+									<img src="images/liam.png">
+								</div>
+								<p>电影</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="pon">
+									<i class="iconfont">&#xe602;</i>
+								</div>
+								<p>团购</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="wm">
+									<i class="iconfont">&#xe653;</i>
+								</div>
+								<p>外卖</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="tax">
+									<i class="iconfont">&#xe60a;</i>
+								</div>
+								<p>打车</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="hotel">
+									<i class="iconfont">&#xe67f;</i>
+								</div>
+								<p>酒店</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="cacy">
+									<i class="iconfont">&#xe62d;</i>
+								</div>
+								<p>美食</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="ktv">
+									<i class="iconfont">&#xe609;</i>
+								</div>
+								<p>KTV</p>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="huafei">
+									<i class="iconfont">&#xe60f;</i>
+								</div>
+								<p>充值</p>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+				<div class="trol" onclick="fuwu()">
+					<span class="prompt"  id="both">展示全部</span>
+					<i class="iconfont arrow">&#xe81c;</i>
+				</div>
+			</div>
+			<div class="data">
+				<div class="pltitle">
+					<h2>购物</h2>
+					<span class="ref">
+						换一个
+						<i class="iconfont sx">&#xe7e9;</i>
+					</span>
+					<a href="#" class="edit">
+						<i class="iconfont gd">&#xe649;</i>
+					</a>
+					<!-- <ul class="tap">
+						<li data-action="top">置顶</li>
+						<li data-action="close">关闭</li>
+					</ul> -->
+				</div>
+				<div class="pltcon">
+					<a href="#" class="shopping">
+						<img src="images/fgrs.jpg">
+						<div class="shop">
+							<span class="baoyou">包邮时尚晴雨公主伞</span>
+						</div>
+					</a>
+				</div>
+			</div>    
+		</div>
+	</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>日历插件</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			font-family: "微软雅黑";
+		    text-decoration: none;
+		    list-style: none;
+		}
+		.rili_waikuang{
+			width: 500px;
+			height: 340px;
+			background: #E6E6E6;
+			padding: 2% 0;
+		}
+		.rili_waikuang .rili_left{
+			width: 25%;
+			height:205px;
+			/*background: #963;*/
+			float: left;
+			text-align: center;
+			padding: 66px 0;
+		}
+		.rili_waikuang .rili_left .rili_left_nei{
+			width: 100%;
+			height: 210px;
+			/*background: #321;*/
+		}
+		.rili_waikuang .rili_left .rili_left_nei span{
+			width: 100%;
+			height:30%;
+			/*background: #521;*/
+			display: block;
+		}
+		.rili_waikuang .rili_left .rili_left_nei span:hover{
+			cursor: pointer;
+		}
+		.rili_waikuang .rili_left .rili_left_nei div{
+			width: 100%;
+			height: 40%;
+			/*background: #654;*/
+		}
+		.rili_waikuang .rili_right{
+			width: 72%;
+			height: 205px;
+			/*background: #985;*/
+			float: right;
+			margin-right: 3%;
+		}
+		.rili_waikuang .rili_right table{
+			width: 100%;
+			height: auto;
+		}
+		.rili_waikuang .rili_right table tr{
+			margin: 5%;
+		}
+		.rili_waikuang .rili_right table tr td{
+			width: 14%;
+			height: 14%;
+			display: block;
+			float: left;
+			text-align: center;
+			padding: 3.5% 0;
+		}
+		.rili_waikuang .rili_right table tr td:hover{
+			cursor: pointer;
+			/*background: #0AA770;*/
+			border-radius: 50%;
+		}
+		.rili_waikuang .rili_right table tr .w_day{
+			color: #FF5500;
+		}
+	</style>
+</head>
+<body style="margin: 5% 30%;">
+	<div class="rili_waikuang">
+		<div class="rili_left">
+			<div class="rili_left_nei">
+				<span id="up" onclick="up_dian()"><img src="images/jiantoushang.png" alt="" width="30px" height="30px" style="margin-top: 13%"></span>
+				<div  ><span id="year" style="color: #999">2016</span> <p style="color: #0AA770;font-size: 24px;font-weight: bolder;" id="mouth">08</p> 月</div>
+				<span id="down" onclick="down_dian()"><img src="images/jiantouxia.png" alt="" width="30px" height="30px"></span>
+			</div>
+		</div>
+		<div class="rili_right" id="right">
+			<!-- <ul id="ul">
+				<li>
+					<a href="" style="color: #0AA770"><span>一</span></a>
+					<a href="" style="color: #0AA770"><span>二</span></a>
+					<a href="" style="color: #0AA770"><span>三</span></a>
+					<a href="" style="color: #0AA770"><span>四</span></a>
+					<a href="" style="color: #0AA770"><span>五</span></a>
+					<a href="" style="color: #FF5500"><span>六</span></a>
+					<a href="" style="color: #FF5500"><span>日</span></a>
+				</li>
+				<li class="lili">
+					<a href=""><span>1</span></a>
+					<a href=""><span>2</span></a>
+					<a href=""><span>3</span></a>
+					<a href=""><span>4</span></a>
+					<a href=""><span>5</span></a>
+					<a href=""><span>6</span></a>
+					<a href=""><span>7</span></a>
+				</li>
+				<li class="lili">
+					<a href=""><span>8</span></a>
+					<a href=""><span>9</span></a>
+					<a href=""><span>10</span></a>
+					<a href=""><span>11</span></a>
+					<a href=""><span>12</span></a>
+					<a href=""><span>13</span></a>
+					<a href=""><span>14</span></a>
+				</li>
+				<li class="lili">
+					<a href=""><span>15</span></a>
+					<a href=""><span>16</span></a>
+					<a href=""><span>17</span></a>
+					<a href=""><span>18</span></a>
+					<a href=""><span>19</span></a>
+					<a href=""><span>20</span></a>
+					<a href=""><span>21</span></a>
+				</li>
+				<li class="lili">
+					<a href=""><span>22</span></a>
+					<a href=""><span>23</span></a>
+					<a href=""><span>24</span></a>
+					<a href=""><span>25</span></a>
+					<a href=""><span>26</span></a>
+					<a href=""><span>27</span></a>
+					<a href=""><span>28</span></a>
+				</li>
+				<li class="lili">
+					<a href=""><span>29</span></a>
+					<a href=""><span>30</span></a>
+					<a href=""><span>31</span></a>
+					<a href="" style="color: #999"><span>1</span></a>
+					<a href="" style="color: #999"><span>2</span></a>
+					<a href="" style="color: #999"><span>3</span></a>
+					<a href="" style="color: #999"><span>4</span></a>
+				</li>
+				<li class="lili">
+					<a href="" style="color: #999"><span>5</span></a>
+					<a href="" style="color: #999"><span>6</span></a>
+					<a href="" style="color: #999"><span>7</span></a>
+					<a href="" style="color: #999"><span>8</span></a>
+					<a href="" style="color: #999"><span>9</span></a>
+					<a href="" style="color: #999"><span>10</span></a>
+					<a href="" style="color: #999"><span>11</span></a>
+				</li>
+			</ul> -->
+			<table id="table">
+			    <tr  class="xing">
+			        <td style="color: #0AA770" class="xing">星期一</td>
+			        <td style="color: #0AA770" class="xing">星期二</td>
+			        <td style="color: #0AA770" class="xing">星期三</td>
+			        <td style="color: #0AA770" class="xing">星期四</td>
+			        <td style="color: #0AA770" class="xing">星期五</td>
+			        <td style="color: #FF5500" class="xing">星期六</td>
+			        <td style="color: #FF5500" class="xing">星期日</td>
+			    </tr>
+			    <tr class="day">
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td class="w_day"></td>
+			        <td class="w_day"></td>
+			    </tr>
+			    <tr class="day">
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td class="w_day"></td>
+			        <td class="w_day"></td>
+			    </tr>
+			    <tr class="day">
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td class="w_day"></td>
+			        <td class="w_day"></td>
+			    </tr>
+			    <tr class="day">
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td class="w_day"></td>
+			        <td class="w_day"></td>
+			    </tr>
+			    <tr class="day">
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td class="w_day"></td>
+			        <td class="w_day"></td>
+			    </tr>
+			    <tr class="day">
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td></td>
+			        <td class="w_day"></td>
+			        <td class="w_day"></td>
+			    </tr>
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+ var table = document.getElementById("table");
+        var tableChildren = table.children[0].children;
+	  var mouth=document.getElementById("mouth");
+    var month=mouth.innerHTML;
+    var years=2016;
+    var day;
+    var week;
+function days() {
+    week = new Date("2016-" + month + "-1").getDay();
+    week = (week == 0 ? 6 : week - 1);
+    if (month != 12) {
+        day = new Date("2016-" + (parseInt(month) + 1) + "-1");
+    } else {
+        day = new Date("2017-1-1");
+    }
+    day = day.setDate(0);
+    day = new Date(day).getDate();
+}
+    days();
+
+    function makeTable(week, day) {
+        var table = document.getElementById("table");
+        var tableChildren = table.children[0].children;
+        var trnum = 1;
+        var tdnum = week;
+        var clearTr = 1;
+        var clearTd = 0;
+        while (1) {
+            if (!tableChildren[clearTr].children[clearTd]) {
+                clearTd = 0;
+                clearTr++;
+            }
+            if (!tableChildren[clearTr]) {
+                break;
+            }
+            tableChildren[clearTr].children[clearTd].innerHTML = "";
+            clearTd++;
+        }
+        for (var i = 0; i < day; i++) {
+            if (!tableChildren[trnum].children[tdnum]) {
+                tdnum = 0;
+                trnum++;
+            }
+            tableChildren[trnum].children[tdnum].innerHTML = i + 1;
+            tdnum++;
+        }
+    };
+    makeTable(week, day);
+
+//    上一月
+    var year = document.getElementById("year");
+    var up = document.getElementById("up");
+    function up_dian() {
+        if (mouth.innerHTML == 1) {
+            mouth.innerHTML = 12;
+            year.innerHTML = years - 1;
+        } else {
+            mouth.innerHTML -= 1;
+        }
+        // console.log(mouth.innerHTML);
+        month = mouth.innerHTML;
+        days();
+        makeTable(week, day);
+    }
+
+//下一月
+    var down = document.getElementById("down");
+    function down_dian() {
+        if (mouth.innerHTML == 12) {
+            mouth.innerHTML = 1;
+            year.innerHTML = years + 1;
+        } else {
+            mouth.innerHTML = parseInt(mouth.innerHTML) + 1;
+        }
+        month = mouth.innerHTML;
+        days();
+        makeTable(week, day);
+    }
+</script>
+</html>

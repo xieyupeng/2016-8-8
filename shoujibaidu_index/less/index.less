@@ -1,0 +1,100 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+  background: #eeeff0;
+}
+.weather{
+  -webkit-transition: height .3s linear;
+  text-align: left;
+}
+.air{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 1;
+  padding: 0 6px;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+}
+.air .qt{
+  float: left;
+  color: #b7babe;
+  font-size: 24px;
+  top: 3px;
+  width: auto;
+  line-height: 35px;
+  margin:3px 0 0 2px;
+}
+.air>p{
+  color: #8c8c8c;
+  float: left;
+  font-size: 20px;
+  padding-left: 5px;
+}
+.air .bjair{
+  float: left;
+  position: relative;
+  top: 7px;
+  padding: 0 2px 0 7px;
+}
+.air .bjair p{
+  margin: 0;
+  height: 13px;
+  text-align: left;
+  line-height: 13px;
+  font-size: 11px;
+  color: #999;
+}
+.air .xs{
+  display: inline-block;
+  color: #b6b7ba;
+  vertical-align: bottom;
+  bottom: 0;
+  font-size: 16px;
+  top: 4px;
+  width: auto;
+  line-height: 28px;
+  margin-left: 2px;
+}
+.weather .detail{
+  width: 100%;
+  z-index: 2;
+  height: 248px;
+  background: #4ABFF4 url(../images/asam.jpg);
+  background-size: 100% 248px;
+  display: none;
+}
+.weather .detail .del{
+  padding: 12px 0 8px 14px;
+  position: relative;
+}
+.del .bj{
+  height: 25px;
+  line-height: 25px;
+  font-size: 14px;
+}
+.del .bj span:first-child{
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  display: block;
+  float: left;
+  font-size: 14px;
+  vertical-align: middle;
+  line-height: 30px;
+  margin-right: 8px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 2px;
+}
+div{
+  width:100px;
+  background: #00A2D4;
+}
